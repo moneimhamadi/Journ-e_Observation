@@ -1,0 +1,89 @@
+<!-- <pre>{{ userForm.value | json }}</pre> -->
+<form [formGroup]="userForm">
+  <div class="entete">
+    <img src="../../assets/foto.jpg" alt="profile-img" />
+
+    <button
+      type="button"
+      class="btn btn-light"
+      (click)="openFileSelectDialog()"
+    >
+      <i class="fa fa-pencil"></i>Remplacer
+    </button>
+    <button type="button" class="btn btn-light">
+      <i class="fa fa-trash-o"></i>Supprimer
+    </button>
+  </div>
+  <div class="form">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            name="nom"
+            placeholder="Nom"
+            formControlName="first_name"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            name="prenom"
+            placeholder="Prénom"
+            formControlName="last_name"
+          />
+        </div>
+      </div>
+      <input
+        class="email"
+        type="email"
+        name="adresse-eamil"
+        placeholder="Adresse Email"
+        formControlName="email"
+      />
+      <input
+        type="date"
+        name="date-naissance"
+        placeholder="Date de Naissance"
+        formControlName="birthday"
+      />
+      <input
+        type="text"
+        disabled
+        name="date-naissance"
+        placeholder="(+ 33 -- -- -- )"
+      />
+      <div class="parents">
+        <button class="parent-buton">Parent 1</button>
+        <button class="parent-buton">Parent 2</button>
+      </div>
+
+      <div class="foot">
+        <button class="parent-buton" (click)="updateUser()">Modifier</button>
+        <button class="parent-buton">Annuler</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- <input
+      formControlName="photo"
+      fullWidth
+      maxlength="100"
+      onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"
+      nbInput
+      placeholder="Image User"
+      type="file"
+      class="form-control"
+      #fileUser
+      id="fileUser"
+      accept="image/*"
+      (change)="onSelectImageUser($event)"
+      style="font-size: 18px; font-weight: bold"
+    />
+    <img
+      id="blah"
+      alt="image user pas encore importé"
+      width="100"
+      height="100"
+    /> -->

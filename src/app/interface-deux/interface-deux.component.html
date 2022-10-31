@@ -1,0 +1,50 @@
+<br />
+<div *ngFor="let item of children" class="card-child">
+  <div class="one-card" (click)="onSelectChild(item)">
+    <img src="{{ item.photo }}" alt="" />
+    <h6>{{ item.first_name }} {{ item.last_name }}</h6>
+  </div>
+</div>
+
+<form [formGroup]="childForm">
+  <div class="form">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            name="nom"
+            placeholder="Nom"
+            [value]="selectedChild.first_name"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            name="prenom"
+            placeholder="Prénom"
+            [value]="selectedChild.last_name"
+          />
+        </div>
+      </div>
+      <div style="margin-top: 2.5cm">
+        <h6>Les réseaux sociaux de l'enfant</h6>
+        <div class="social-info">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+        <div class="social-info">
+          <i class="fa fa-twitter" aria-hidden="true"></i>twitter
+          <!-- <input type="text" placeholder="user-name" />
+        <p>Enregistrer</p> -->
+        </div>
+        <div class="social-info">
+          <i class="fa fa-instagram" aria-hidden="true"></i>instagram
+        </div>
+      </div>
+      <div class="foot">
+        <button class="parent-buton">Modifier</button>
+        <button class="parent-buton">Annuler</button>
+      </div>
+    </div>
+  </div>
+</form>

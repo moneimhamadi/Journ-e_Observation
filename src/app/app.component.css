@@ -1,0 +1,25 @@
+div a{
+    padding-left: 115px;
+}
+
+.modif-profil{
+    padding-left: 10px;
+}
+.mes-enafants{
+    padding-left: 50px;
+}
+a{
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+div a :focus{
+    text-decoration: no;
+    
+}
+div a :hover{
+    text-decoration: none;
+    
+}
